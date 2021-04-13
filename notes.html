@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./themes/nord.css">
+    <script type="module" src="./components/center.js"></script>
+    <script type="module" src="./components/back.js"></script>
+    <script type="module" src="./components/home.js"></script>
+    <script type="module" src="./notes_view.js"></script>
+    <style>
+      #notes { height: 100%; }
+    </style>
+    <title>Notes - nullv0id</title>
+<!--     <nv-title><nv-paste data-id="title"></nv-paste> - Notes - nullv0id</nv-title> -->
+  </head>
+  <body>
+    <div style="position: fixed; margin: 0.5em"><nv-back style="margin: 0 0.5em"></nv-back><nv-home style="margin: 0 0.5em"></nv-home></div>
+    <!-- TODO: nv-fullscreen -->
+    <nv-notes id="notes">
+      <ul id="list" data-role="list"></ul>
+      <div id="content">
+        <div id="header">
+          <span id="title" data-role="title"></span>
+        </div>
+      </div>
+    </nv-notes>
+  </body>
+</html>

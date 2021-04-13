@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./themes/nord.css">
+    <script type="module" src="./plugins/auto_import.js"></script>
+    <script type="module" src="./plugins/pause_in_background.js"></script>
+    <!-- NOTE: this has to be after the scripts, otherwise the elements haven't been defined yet -->
+    <title>Date and Time - nullv01d</title>
+    <nv-title><nv-now><nv-datetime data-role="datetime"><span data-role="hour12"></span>:<span data-role="minute"></span>:<span data-role="second"></span> <span data-role="ampm"></span> - nullv01d</nv-datetime></nv-now></nv-title>
+  </head>
+  <body>
+    <nv-fullscreen>
+      <nv-center>
+        <nv-now>
+          <nv-datetime data-role="datetime">
+            <div id="date" style="font-size: 20pt">
+              <span data-role="dayOfWeek">Thursday</span>, <span data-role="date">1</span> <span data-role="month">January</span> <span data-role="year">1970</span>
+            </div>
+            <div id="time" style="font-size: 60pt">
+              <span data-role="hour12">12</span>:<span data-role="minute">00</span>:<span data-role="second">00</span> <span data-role="ampm">am</span>
+            </div>
+          </nv-datetime>
+        </nv-now>
+      </nv-center>
+    </nv-fullscreen>
+    <div style="position: fixed; margin: 0.5em"><nv-back style="margin: 0 0.5em"></nv-back><nv-home style="margin: 0 0.5em"></nv-home></div>
+  </body>
+</html>

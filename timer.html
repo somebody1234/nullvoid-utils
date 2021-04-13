@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./themes/nord.css">
+    <script type="module" src="./plugins/auto_import.js"></script>
+    <script type="module" src="./plugins/pause_in_background.js"></script>
+    <script type="module" src="./plugins/timespan_input.js"></script>
+    <style>
+      #timer { font-size: 200%; }
+      #display { font-size: 200%; width: 10em; }
+      #toggle { width: 6.5em; }
+      #reset { width: 3.5em; }
+    </style>
+    <title>Timer - nullv01d</title>
+  </head>
+  <body>
+    <nv-fullscreen>
+      <nv-center>
+        <nv-timer id="timer">
+          <div>
+            <nv-timespan id="display" data-role="display input" data-editable><span data-role="hour-total">0</span>:<span data-role="minute">05</span>:<span data-role="second">00</span></nv-timespan>
+          </div>
+          <div>
+            <button id="toggle" data-role="toggle">Start</button>
+            <button id="reset" data-role="reset">Reset</button>
+          </div>
+        </nv-timer>
+      </nv-center>
+    </nv-fullscreen>
+    <div style="position: fixed; margin: 0.5em"><nv-back style="margin: 0 0.5em"></nv-back><nv-home style="margin: 0 0.5em"></nv-home></div>
+  </body>
+</html>

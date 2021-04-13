@@ -1,0 +1,33 @@
+html, body { margin: 0; }
+
+body {
+  font-family: Roboto, sans-serif;
+  color: var(--primary);
+  background-color: var(--primary-background);
+}
+
+button {
+  padding: 0.2em;
+  font-size: 100%;
+  border: none;
+  color: var(--tertiary);
+  background-color: var(--secondary-background);
+}
+
+button:hover {
+  background-color: var(--tertiary-background);
+}
+
+pre {
+  background-color: var(--secondary-background);
+}
+
+code {
+  font-family: 'Fantasque Sans Mono Nerd Font', 'Fantasque Sans Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: var(--tertiary);
+  text-shadow: 0 0 0.1em;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./themes/nord.css">
+    <script type="module" src="./plugins/auto_import.js"></script>
+    <style>
+      body { display: flex; flex-flow: row nowrap; }
+      #input { flex: 1 0 auto; }
+      #output { flex: 1 0 auto; }
+    </style>
+    <title>Pipeline - nullv01d</title>
+  </head>
+  <body>
+    <div style="position: fixed; margin: 0.5em"><nv-back style="margin: 0 0.5em"></nv-back><nv-home style="margin: 0 0.5em"></nv-home></div>
+    <nv-fullscreen>
+      <div id="content">
+        <div id="sidebar">
+
+        </div>
+        <ul id="pipeline">
+
+        </ul>
+        <div id="io">
+          <textarea id="input"></textarea>
+          <textarea id="output"></textarea>
+        </div>
+      </div>
+    </nv-fullscreen>
+    <script type="module" src="./pipeline.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./themes/nord.css">
+    <script type="module" src="./plugins/auto_import.js"></script>
+    <style>
+      .empty-key { opacity: 0; }
+      .string { font-size: 2.5vh; }
+      .auto-string { font-size: 2.5vh; color: var(--tertiary); }
+      #display { font-size: 10vh; }
+      /* TODO: display: grid? */
+      #calculator { display: flex; flex-flow: column nowrap; }
+      #expr { flex: 1 0 0; text-align: right; }
+      #display { flex: 3 0 0; text-align: right; }
+      #keys { flex: 16 0 0; display: flex; font-size: 10vh; flex-flow: column nowrap; text-align: center; }
+      #keys > div { flex: 1 0 auto; display: flex; flex-flow: row nowrap; }
+      #keys > div > div { margin: 8px; flex: 1 0 1em; }
+      #keys > div > div { background: var(--secondary-background); cursor: pointer; user-select: none; }
+      #keys > div > div:hover { background: var(--tertiary-background); }
+    </style>
+    <title>Calculator - nullv0id</title>
+  </head>
+  <body>
+    <nv-fullscreen>
+      <nv-calculator id="calculator">
+        <div id="expr"><span data-role="string"></span><span data-role="auto-string"></span></div>
+        <span id="display" data-role="display">0</span>
+        <div id="keys" data-role="keys">
+          <div><div data-role="7"><span>7</span></div><div data-role="8">8</div><div data-role="9">9</div><div data-role="*">×</div></div>
+          <div><div data-role="4"><span>4</span></div><div data-role="5">5</div><div data-role="6">6</div><div data-role="/">÷</div></div>
+          <div><div data-role="1"><span>1</span></div><div data-role="2">2</div><div data-role="3">3</div><div data-role="+">+</div></div>
+          <div><div data-role="0"><span>0</span></div><div data-role=".">.</div><div class="empty-key"></div><div data-role="-">-</div></div>
+        </div>
+      </nv-calculator>
+    </nv-fullscreen>
+    <!-- TODO: some kind of header bar component? inline css is ew -->
+    <div style="position: fixed; margin: 0.5em"><nv-back style="margin: 0 0.5em"></nv-back><nv-home style="margin: 0 0.5em"></nv-home></div>
+  </body>
+</html>
