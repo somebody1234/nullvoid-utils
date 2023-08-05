@@ -1,6 +1,6 @@
 import { importModule, importStyle } from '../_import.js';
 
-const root = `${import.meta.url}/..`;
+const root = `${import.meta.url}/../..`;
 
 let theme = 'theme' in document.body.dataset ? document.body.dataset.theme : document.querySelector('meta[name=nv-theme]')?.content;
 
